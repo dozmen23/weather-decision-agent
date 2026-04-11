@@ -1,0 +1,6 @@
+# Minimal placeholder dependencies for future development
+streamlit
+requests
+pydantic
+python-dotenv
+pytest

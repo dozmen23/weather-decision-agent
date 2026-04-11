@@ -1,0 +1,9 @@
+{
+  "description": "Placeholder evaluation cases for future recommendation testing.",
+  "cases": [
+    {
+      "id": "case-001",
+      "summary": "Example scenario for weather and preference alignment checks."
+    }
+  ]
+}

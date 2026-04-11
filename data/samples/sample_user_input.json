@@ -1,0 +1,9 @@
+{
+  "location": "Sample City",
+  "preferred_activity_types": [
+    "outdoor",
+    "indoor"
+  ],
+  "weather_sensitivity": "placeholder",
+  "notes": "Sample input structure for future testing and UI prototyping."
+}
