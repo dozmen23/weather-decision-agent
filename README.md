@@ -1,55 +1,35 @@
+Weather Decision Agent
+
 Team
+
 Deniz Özmen (2203032)
 Ömer Şahin (2104101)
 
-# Weather Decision Agent
+⸻
 
-Weather Decision Agent is a Python-based AI project scaffold for a future
-system that analyzes weather conditions and recommends suitable activities
-based on forecast data and user preferences.
+Overview
 
-## Planned Features
+Weather Decision Agent is an agentic AI system designed to transform raw weather data into personalized activity recommendations.
 
-- Weather data fetching and normalization
-- User preference parsing and handling
-- Activity recommendation and ranking
-- Agentic decision workflow
-- Optional LLM-based explanation or evaluation
-- Simple Streamlit web interface
-- Offline evaluation pipeline for recommendation quality
+Unlike traditional weather applications that only present environmental data, this system focuses on decision-making by combining weather conditions, user preferences, and contextual constraints.
 
-## Proposed Folder Structure
+The goal is to develop a system that can autonomously analyze inputs, evaluate possible options, and recommend the most suitable activities, along with clear reasoning behind its decisions.
 
-```text
-weather-decision-agent/
-├── app/
-│   ├── agent/
-│   ├── core/
-│   ├── models/
-│   ├── services/
-│   ├── ui/
-│   └── utils/
-├── data/
-│   ├── processed/
-│   ├── raw/
-│   └── samples/
-├── docs/
-├── evaluation/
-├── tests/
-├── .env.example
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
+⸻
 
-## Setup
+Project Goals
+	•	Convert weather data into actionable insights
+	•	Provide personalized recommendations based on user preferences
+	•	Build an agentic decision system with multi-step reasoning
+	•	Ensure explainability and evaluation of recommendations
 
-1. Create and activate a virtual environment.
-2. Install dependencies from `requirements.txt`.
-3. Copy `.env.example` to `.env` and fill in placeholder values.
-4. Add implementation details as the project moves beyond the scaffold phase.
+⸻
 
-## Status
-
-This repository currently contains only structural placeholders and
-documentation notes. No production logic has been implemented yet.
+Planned Features
+	•	Weather data fetching and normalization
+	•	User preference modeling and handling
+	•	Activity recommendation and ranking system
+	•	Agentic decision workflow
+	•	Optional LLM-based explanation and evaluation
+	•	Streamlit-based web interface
+	•	Offline evaluation pipeline for recommendation quality
