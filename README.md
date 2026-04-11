@@ -1,3 +1,7 @@
+Team
+Deniz Özmen (2203032)
+Ömer Şahin (2104101)
+
 # Weather Decision Agent
 
 Weather Decision Agent is a Python-based AI project scaffold for a future
