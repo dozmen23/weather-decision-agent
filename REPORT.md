@@ -27,7 +27,7 @@ The data collection process will work as follows:
 
 Example normalized weather data:
 
-\```json
+```json
 {
   "location": "Istanbul",
   "temperature": 18,
@@ -38,7 +38,7 @@ Example normalized weather data:
   "humidity": 65,
   "timestamp": "2026-05-03 12:00"
 }
-\```
+```
 
 ---
 
@@ -60,7 +60,6 @@ The main technologies planned for the project are:
 
 The weather API key will be stored in a `.env` file and will not be written directly in the source code.
 
-
 ## 4. System Workflow
 
 The system will follow a step-by-step workflow from user input to activity recommendation.
@@ -76,6 +75,7 @@ The system will follow a step-by-step workflow from user input to activity recom
 
 The general workflow is:
 
+```text
 User Location and Preferences
         ↓
 Weather API Request
@@ -89,7 +89,7 @@ Decision Agent
 Activity Suitability Scoring
         ↓
 Ranked Activity Recommendations
-
+```
 
 ## 5. Team Member Responsibilities
 
