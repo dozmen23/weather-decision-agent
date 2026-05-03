@@ -72,3 +72,6 @@ Planned Features
 	•	Streamlit-based web interface
 	•	Offline evaluation pipeline for recommendation quality
 
+## Project Documentation
+
+- [Technical Report](docs/technical_report.md)
