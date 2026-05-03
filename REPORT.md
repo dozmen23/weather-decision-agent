@@ -6,24 +6,28 @@ Weather Decision Agent is a Python-based decision support system that recommends
 
 The system will use weather variables such as temperature, weather condition, precipitation, wind speed, and humidity. These variables will be combined with user preferences such as indoor/outdoor preference, activity intensity, and budget level.
 
-The main goal of the project is to convert raw weather data into ranked activity recommendations. The first version will use an agent-based recommendation approach supported by heuristic scoring. The system will evaluate predefined activity options according to weather conditions and user preferences, calculate suitability scores, and return the most suitable activities with short explanations.
+The main goal of the project is to convert raw weather data into ranked activity recommendations. In this project, the decision-making process will be supported by GPT-4o mini. GPT-4o mini will analyze the normalized weather data, user preferences, and possible activity options, then decide which activities are the most suitable for the user. It will also generate short explanations for the recommended activities.
+
+The system will evaluate predefined activity options according to weather conditions and user preferences. However, instead of relying only on fixed heuristic scoring, the final recommendation decision and ranking will be made by the GPT-4o mini based decision agent.
 
 The project will be developed as a modular Python application and presented through a simple Streamlit web interface.
 
 ## 2. Data Source and Collection Method
 
-The project will use real weather data collected from an external weather API. OpenWeatherMap or WeatherAPI can be used as the main data source.
+The project will use real weather data collected from an external weather API. OpenWeatherMap will be used as the main weather data source because it provides real-time weather data in JSON format and includes the required variables such as temperature, weather condition, humidity, wind speed, and precipitation.
 
 The weather data will be fetched according to the user’s selected location. The API response will be received in JSON format and converted into the project’s internal data structure before being used by the decision agent.
 
 The data collection process will work as follows:
 
 1. The user enters a location through the Streamlit interface.
-2. The weather service sends a request to the selected weather API.
+2. The weather service sends a request to the OpenWeatherMap API.
 3. The API returns weather data in JSON format.
 4. The system extracts the required weather variables.
 5. The extracted data is normalized into a standard internal format.
-6. The normalized weather data is sent to the decision agent.
+6. The normalized weather data is combined with user preferences and predefined activity options.
+7. The combined data is sent to the GPT-4o mini based decision agent.
+8. GPT-4o mini analyzes the context and returns ranked activity recommendations with explanations.
 
 Example normalized weather data:
 
@@ -56,21 +60,25 @@ The main technologies planned for the project are:
 
 **JSON:** Storing normalized weather data, user preferences, and activity definitions.
 
-**Python-dotenv:** Managing the weather API key through environment variables.
+**Python-dotenv:** Managing the weather API key and OpenAI API key through environment variables.
 
-The weather API key will be stored in a `.env` file and will not be written directly in the source code.
+**OpenWeatherMap API:** Fetching real-time weather data.
+
+**GPT-4o mini:** Analyzing weather data and user preferences, ranking activity options, and generating recommendation explanations.
+
+The weather API key and OpenAI API key will be stored in a `.env` file and will not be written directly in the source code.
 
 ## 4. System Workflow
 
 The system will follow a step-by-step workflow from user input to activity recommendation.
 
 1. The user enters a location and personal preferences through the Streamlit interface.
-2. The weather service fetches real-time weather data from the selected weather API.
+2. The weather service fetches real-time weather data from the OpenWeatherMap API.
 3. The raw API response is converted into a normalized weather data format.
-4. The decision agent receives the normalized weather data and user preferences.
-5. The agent compares the weather conditions with predefined activity data.
-6. Each activity receives a suitability score according to weather variables and user preferences.
-7. The activities are ranked from most suitable to least suitable.
+4. The decision agent receives the normalized weather data, user preferences, and predefined activity options.
+5. The GPT-4o mini based decision agent analyzes the weather conditions and user preferences.
+6. The agent compares possible activities according to the given context.
+7. GPT-4o mini ranks the most suitable activities.
 8. The system returns the top recommendations with short explanations.
 
 The general workflow is:
@@ -84,9 +92,9 @@ Raw Weather Data
         ↓
 Data Normalization
         ↓
-Decision Agent
+GPT-4o Mini Based Decision Agent
         ↓
-Activity Suitability Scoring
+Activity Ranking and Reasoning
         ↓
 Ranked Activity Recommendations
 ```
@@ -96,13 +104,15 @@ Ranked Activity Recommendations
 ### Deniz Özmen
 
 - Designing the decision agent workflow
+- Preparing the GPT-4o mini based decision prompt structure
 - Implementing the activity recommendation logic
-- Developing the activity suitability scoring method
+- Integrating the GPT-4o mini decision-making process
 - Building the Streamlit user preference input section
 
 ### Ömer Şahin
 
-- Implementing weather data fetching from the API
+- Implementing weather data fetching from the OpenWeatherMap API
 - Normalizing raw weather API responses into the internal data format
 - Preparing structured activity data in JSON format
+- Connecting normalized weather data and activity data to the decision agent
 - Building the Streamlit recommendation output section
