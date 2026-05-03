@@ -10,8 +10,6 @@ The main goal of the project is to convert raw weather data into ranked activity
 
 The project will be developed as a modular Python application and presented through a simple Streamlit web interface.
 
----
-
 ## 2. Data Source and Collection Method
 
 The project will use real weather data collected from an external weather API. OpenWeatherMap or WeatherAPI can be used as the main data source.
@@ -62,7 +60,6 @@ The main technologies planned for the project are:
 
 The weather API key will be stored in a `.env` file and will not be written directly in the source code.
 
----
 
 ## 4. System Workflow
 
@@ -79,7 +76,6 @@ The system will follow a step-by-step workflow from user input to activity recom
 
 The general workflow is:
 
-\```text
 User Location and Preferences
         ↓
 Weather API Request
@@ -93,9 +89,7 @@ Decision Agent
 Activity Suitability Scoring
         ↓
 Ranked Activity Recommendations
-\```
 
----
 
 ## 5. Team Member Responsibilities
 
